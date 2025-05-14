@@ -28,13 +28,18 @@ Vaardigheden: ${vaardigheden}
 Opleidingsniveau: ${opleiding}
 Sector: ${sector}
 
-Stel je voor dat je direct tegen ${naam} praat. Schrijf een kort adviesbericht in 3 paragrafen:
-1. Begin met een vriendelijke begroeting aan ${naam}.
-2. Geef vervolgens de AI-risicoscore (tussen 0 en 100) en leg uit waarom deze score van toepassing is.
-3. Sluit af met een concrete suggestie om futureproof te blijven.
+Schrijf een persoonlijk advies in HTML-structuur alsof je direct tegen ${naam} spreekt. Gebruik maximaal 120 woorden.
 
-Gebruik maximaal 120 woorden. Gebruik eventueel simpele HTML-tags zoals <strong>, <ul>, <li> of <p> zodat het makkelijk te stylen is aan de frontend.`;
+De structuur:
+<h3>Persoonlijk AI-advies voor ${naam}</h3>
 
+<p><strong>1. Begroeting:</strong> Begin met een warme, motiverende begroeting aan ${naam}.</p>
+
+<p><strong>2. Risicoscore & uitleg:</strong> Geef een AI-risicoscore tussen 0 en 100. Leg in maximaal 2 zinnen uit waarom deze score van toepassing is.</p>
+
+<p><strong>3. Aanbeveling:</strong> Geef 1 tot 2 suggesties om futureproof te blijven. Gebruik een <ul><li> structuur voor de tips.</p>
+
+Formatteer je volledige antwoord als HTML. Gebruik geen tekst buiten de HTML-tags. Schrijf in duidelijke, begrijpelijke taal.`;
 
   try {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
