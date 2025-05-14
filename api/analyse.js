@@ -17,7 +17,9 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: "Ontbrekende gegevens in het verzoek." });
   }
 
-  const prompt = `Je bent een AI-loopbaanadviseur. Analyseer dit profiel:
+const prompt = `Je bent een AI-loopbaanadviseur die op een vriendelijke en duidelijke manier advies geeft aan individuen over hun werk. 
+
+Analyseer het volgende profiel:
 Naam: ${naam}
 Functie: ${functie}
 Ervaring: ${ervaring} jaar
@@ -26,11 +28,13 @@ Vaardigheden: ${vaardigheden}
 Opleidingsniveau: ${opleiding}
 Sector: ${sector}
 
-Geef:
-1. Een AI-risicoscore van 0-100
-2. Een korte uitleg waarom
-3. Eén suggestie om futureproof te blijven
-Gebruik maximaal 100 woorden.`;
+Stel je voor dat je direct tegen ${naam} praat. Schrijf een kort adviesbericht in 3 paragrafen:
+1. Begin met een vriendelijke begroeting aan ${naam}.
+2. Geef vervolgens de AI-risicoscore (tussen 0 en 100) en leg uit waarom deze score van toepassing is.
+3. Sluit af met een concrete suggestie om futureproof te blijven.
+
+Gebruik maximaal 120 woorden. Gebruik eventueel simpele HTML-tags zoals <strong>, <ul>, <li> of <p> zodat het makkelijk te stylen is aan de frontend.`;
+
 
   try {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
