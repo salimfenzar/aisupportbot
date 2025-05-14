@@ -33,11 +33,11 @@ Schrijf een persoonlijk adviesbericht voor ${naam} in HTML-formaat. Gebruik maxi
 De structuur:
 <h3>Persoonlijk AI-advies voor ${naam}</h3>
 
-<p><strong>1. Begroeting:</strong> Begin met een warme, motiverende begroeting aan ${naam}.</p>
+<p><strong>1.</strong> Begin met een warme, motiverende begroeting aan ${naam}.</p>
 
-<p><strong>2. Risicoscore & uitleg:</strong> Geef een AI-risicoscore tussen 0 en 100. Leg in maximaal 2 zinnen uit waarom deze score van toepassing is.</p>
+<p><strong>2.</strong> Geef een AI-risicoscore tussen 0 en 100. Leg in maximaal 2 zinnen uit waarom deze score van toepassing is.</p>
 
-<p><strong>3. Aanbeveling:</strong></p>
+<p><strong>3.</strong></p>
 <ul>
   <li>Geef 1 of 2 concrete tips om futureproof te blijven.</li>
 </ul>
