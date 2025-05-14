@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: "Ontbrekende gegevens in het verzoek." });
   }
 
-const prompt = `Je bent een AI-loopbaanadviseur die op een vriendelijke en duidelijke manier advies geeft aan individuen over hun werk. 
+const prompt = `Je bent een AI-loopbaanadviseur die op een vriendelijke en duidelijke manier advies geeft aan individuen over hun werk. En of ze vervangbaar zijn door AI in de komende 10 jaar 
 
 Analyseer het volgende profiel:
 Naam: ${naam}
