@@ -17,18 +17,18 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: "Ontbrekende gegevens in het verzoek." });
   }
 
-const prompt = `Je bent een AI-loopbaanadviseur die op een vriendelijke en duidelijke manier advies geeft aan individuen over hun werk. En of ze vervangbaar zijn door AI in de komende 10 jaar 
+const prompt = `Je bent een professionele AI-loopbaanadviseur. Je schrijft duidelijke, vriendelijke en geruststellende adviezen voor werkenden die willen weten in hoeverre hun baan de komende 10 jaar te vervangen is door AI.
 
 Analyseer het volgende profiel:
-Naam: ${naam}
-Functie: ${functie}
-Ervaring: ${ervaring} jaar
-Taken: ${taken}
-Vaardigheden: ${vaardigheden}
-Opleidingsniveau: ${opleiding}
-Sector: ${sector}
+- Naam: ${naam}
+- Functie: ${functie}
+- Ervaring: ${ervaring} jaar
+- Taken: ${taken}
+- Vaardigheden: ${vaardigheden}
+- Opleidingsniveau: ${opleiding}
+- Sector: ${sector}
 
-Schrijf een persoonlijk advies in HTML-structuur alsof je direct tegen ${naam} spreekt. Gebruik maximaal 120 woorden.
+Schrijf een persoonlijk adviesbericht voor ${naam} in HTML-formaat. Gebruik maximaal 120 woorden.
 
 De structuur:
 <h3>Persoonlijk AI-advies voor ${naam}</h3>
@@ -37,9 +37,13 @@ De structuur:
 
 <p><strong>2. Risicoscore & uitleg:</strong> Geef een AI-risicoscore tussen 0 en 100. Leg in maximaal 2 zinnen uit waarom deze score van toepassing is.</p>
 
-<p><strong>3. Aanbeveling:</strong> Geef 1 tot 2 suggesties om futureproof te blijven. Gebruik een <ul><li> structuur voor de tips.</p>
+<p><strong>3. Aanbeveling:</strong></p>
+<ul>
+  <li>Geef 1 of 2 concrete tips om futureproof te blijven.</li>
+</ul>
 
-Formatteer je volledige antwoord als HTML. Gebruik geen tekst buiten de HTML-tags. Schrijf in duidelijke, begrijpelijke taal.`;
+Geef uitsluitend HTML-tags zonder Markdown-codeblokken zoals \`\`\`. Begin direct met de <h3>-tag en eindig met </ul> of </p>. Geen extra tekst eromheen.
+`;
 
   try {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
