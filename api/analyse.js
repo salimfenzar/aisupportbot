@@ -23,11 +23,10 @@ const {
   leidinggeven,
   opleiding,
   taken,
-  vaardigheden,
   bereidheid,
 } = req.body;
 
-if (!naam || !functie || !ervaring || !taken || !vaardigheden || !opleiding || !sector) {
+if (!naam || !functie || !ervaring || !taken  || !opleiding || !sector) {
   return res.status(400).json({ message: "Ontbrekende gegevens in het verzoek." });
 }
 
@@ -46,7 +45,6 @@ Analyseer het volgende profiel:
 - Leidinggevende verantwoordelijkheden: ${leidinggeven}
 - Opleidingsniveau: ${opleiding}
 - Dagelijkse taken: ${taken}
-- Vaardigheden: ${vaardigheden}
 - Bereidheid tot bijscholing: ${bereidheid}
 
 Schrijf een persoonlijk adviesbericht voor ${naam} in HTML-formaat. Gebruik maximaal 120 woorden.
@@ -54,7 +52,8 @@ Schrijf een persoonlijk adviesbericht voor ${naam} in HTML-formaat. Gebruik maxi
 De structuur:
 <h3>Begroeting met naam</h3>
 Geef een AI-risicoscore tussen 0 en 100. Leg in maximaal 2 zinnen uit waarom deze score van toepassing is.
-Geef 1 of 2 concrete tips om futureproof te blijven.
+Leg uit of deze persoon vervangbaar is door ai op basis van de data,
+Geef 1 of 2 concrete tips om futureproof te blijven. 
 Sluit af met een bedankje en motivatie.
 
 Gebruik uitsluitend HTML-tags zonder Markdown (\`\`\`). Begin direct met de <h3>-tag en eindig met </p> of </ul>. Geen extra tekst eromheen.
