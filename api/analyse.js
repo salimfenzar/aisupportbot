@@ -11,32 +11,55 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: "Method not allowed" });
   }
 
-  const { naam, functie, ervaring, taken, vaardigheden, opleiding, sector } = req.body;
+const {
+  naam,
+  geboortedatum,
+  geslacht,
+  woonregio,
+  functie,
+  sector,
+  contract,
+  ervaring,
+  leidinggeven,
+  opleiding,
+  taken,
+  vaardigheden,
+  bereidheid,
+} = req.body;
 
-  if (!naam || !functie || !ervaring || !taken || !vaardigheden || !opleiding || !sector) {
-    return res.status(400).json({ message: "Ontbrekende gegevens in het verzoek." });
-  }
+if (!naam || !functie || !ervaring || !taken || !vaardigheden || !opleiding || !sector) {
+  return res.status(400).json({ message: "Ontbrekende gegevens in het verzoek." });
+}
+
 
 const prompt = `Je bent een professionele AI-loopbaanadviseur. Je schrijft duidelijke, vriendelijke en geruststellende adviezen voor werkenden die willen weten in hoeverre hun baan de komende 10 jaar te vervangen is door AI.
 
 Analyseer het volgende profiel:
 - Naam: ${naam}
+- Geslacht: ${geslacht}
+- Geboortedatum: ${geboortedatum}
+- Regio: ${woonregio}
 - Functie: ${functie}
-- Ervaring: ${ervaring} jaar
-- Taken: ${taken}
-- Vaardigheden: ${vaardigheden}
-- Opleidingsniveau: ${opleiding}
 - Sector: ${sector}
+- Contracttype: ${contract}
+- Jaren ervaring: ${ervaring}
+- Leidinggevende verantwoordelijkheden: ${leidinggeven}
+- Opleidingsniveau: ${opleiding}
+- Dagelijkse taken: ${taken}
+- Vaardigheden: ${vaardigheden}
+- Bereidheid tot bijscholing: ${bereidheid}
 
 Schrijf een persoonlijk adviesbericht voor ${naam} in HTML-formaat. Gebruik maximaal 120 woorden.
 
-de structuur:
-<h3>begroeting met naam</h3>
+De structuur:
+<h3>Begroeting met naam</h3>
 Geef een AI-risicoscore tussen 0 en 100. Leg in maximaal 2 zinnen uit waarom deze score van toepassing is.
 Geef 1 of 2 concrete tips om futureproof te blijven.
-Sluit af en bedankt de persoon voor zijn/haar tijd
-Geef uitsluitend HTML-tags zonder Markdown-codeblokken zoals \`\`\`. Begin direct met de <h3>-tag en eindig met </ul> of </p>. Geen extra tekst eromheen.
+Sluit af met een bedankje en motivatie.
+
+Gebruik uitsluitend HTML-tags zonder Markdown (\`\`\`). Begin direct met de <h3>-tag en eindig met </p> of </ul>. Geen extra tekst eromheen.
 `;
+
 
   try {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
