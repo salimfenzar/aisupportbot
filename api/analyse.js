@@ -54,6 +54,7 @@ De structuur:
 Geef een AI-risicoscore tussen 0 en 100. Leg in maximaal 2 zinnen uit waarom deze score van toepassing is.
 Leg uit of deze persoon vervangbaar is door ai op basis van de data,
 Geef 1 of 2 concrete tips om futureproof te blijven. 
+als de persoon ja of misschien heeft beantwoord op bereidheid, zeg dan wat deze persoon kan doen of meer info kan vinden
 Sluit af met een bedankje en motivatie.
 
 Gebruik uitsluitend HTML-tags zonder Markdown (\`\`\`). Begin direct met de <h3>-tag en eindig met </p> of </ul>. Geen extra tekst eromheen.
