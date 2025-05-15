@@ -31,9 +31,10 @@ if (!naam || !functie || !ervaring || !taken  || !opleiding || !sector) {
 }
 
 
-const prompt = `Geef een kort AI-advies in HTML op basis van het profiel van ${naam}.Spreek tot deze persoon. Beperk tot:
+const prompt = `Je bent een loopbaan adviseur. Geef een kort advies in HTML op basis van het profiel van ${naam} hoe deze persoon zichzelf futureproof kan maken om niet vervangen te worden door AI.
+Spreek tot deze persoon. Beperk tot:
 - AI-risicoscore (0-100) in deze format: AI-risicoscore van (Getal)
-- Maximaal 2 zinnen uitleg
+- Maximaal 2 zinnen uitleg wat deze persoon kan doen om zich beter 
 - 1 concrete tip
 
 Antwoord in HTML zonder markdown.
