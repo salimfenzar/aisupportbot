@@ -31,33 +31,13 @@ if (!naam || !functie || !ervaring || !taken  || !opleiding || !sector) {
 }
 
 
-const prompt = `Je bent een professionele AI-loopbaanadviseur. Je schrijft duidelijke, vriendelijke en geruststellende adviezen voor werkenden die willen weten in hoeverre hun baan de komende 10 jaar te vervangen is door AI.
+const prompt = `Geef een kort AI-advies in HTML op basis van het profiel van ${naam}. Beperk tot:
+- AI-risicoscore (0-100) in deze format: AI-risicoscore van (Getal)
+- Maximaal 2 zinnen uitleg
+- 1 concrete tip
 
-Analyseer het volgende profiel:
-- Naam: ${naam}
-- Geslacht: ${geslacht}
-- Geboortedatum: ${geboortedatum}
-- Regio: ${woonregio}
-- Functie: ${functie}
-- Sector: ${sector}
-- Contracttype: ${contract}
-- Jaren ervaring: ${ervaring}
-- Leidinggevende verantwoordelijkheden: ${leidinggeven}
-- Opleidingsniveau: ${opleiding}
-- Dagelijkse taken: ${taken}
-- Bereidheid tot bijscholing: ${bereidheid}
+Antwoord in HTML zonder markdown.
 
-Schrijf een persoonlijk adviesbericht voor ${naam} in HTML-formaat. Gebruik maximaal 120 woorden.
-
-De structuur:
-<h3>Begroeting met naam</h3>
-Geef een AI-risicoscore tussen 0 en 100. Leg in maximaal 2 zinnen uit waarom deze score van toepassing is. geef het in deze format:Je krijgt een AI-risicoscore van en dan het getal
-Leg uit of deze persoon vervangbaar is door ai op basis van de data,
-Geef 1 of 2 concrete tips om futureproof te blijven. 
-als de persoon ja of misschien heeft beantwoord op bereidheid, zeg dan wat deze persoon kan doen of meer info kan vinden
-Sluit af met een bedankje en motivatie.
-
-Gebruik uitsluitend HTML-tags zonder Markdown (\`\`\`). Begin direct met de <h3>-tag en eindig met </p> of </ul>. Geen extra tekst eromheen.
 `;
 
 
