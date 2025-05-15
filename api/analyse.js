@@ -51,7 +51,7 @@ Schrijf een persoonlijk adviesbericht voor ${naam} in HTML-formaat. Gebruik maxi
 
 De structuur:
 <h3>Begroeting met naam</h3>
-Geef een AI-risicoscore tussen 0 en 100. Leg in maximaal 2 zinnen uit waarom deze score van toepassing is.
+Geef een AI-risicoscore tussen 0 en 100. Leg in maximaal 2 zinnen uit waarom deze score van toepassing is. geef het in deze format: AI-risicoscore van: en dan het getal
 Leg uit of deze persoon vervangbaar is door ai op basis van de data,
 Geef 1 of 2 concrete tips om futureproof te blijven. 
 als de persoon ja of misschien heeft beantwoord op bereidheid, zeg dan wat deze persoon kan doen of meer info kan vinden
