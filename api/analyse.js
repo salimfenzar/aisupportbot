@@ -31,7 +31,7 @@ if (!naam || !functie || !ervaring || !taken  || !opleiding || !sector) {
 }
 
 
-const prompt = `Geef een kort AI-advies in HTML op basis van het profiel van ${naam}. Beperk tot:
+const prompt = `Geef een kort AI-advies in HTML op basis van het profiel van ${naam}.Spreek tot deze persoon. Beperk tot:
 - AI-risicoscore (0-100) in deze format: AI-risicoscore van (Getal)
 - Maximaal 2 zinnen uitleg
 - 1 concrete tip
