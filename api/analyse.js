@@ -41,9 +41,9 @@ Geef een kort en concreet AI-advies in HTML gebaseerd op dit profiel:
 
 Beperk je tot het volgende format:
 
-1. <p><strong>AI-risicoscore van [Getal]</strong></p>
-2. <p>In maximaal 2 zinnen: leg uit waarom deze score geldt voor iemand in de functie van "${functie}", en geef één concreet voorbeeld van hoe deze persoon zichzelf futureproof kan maken. Geen vaag taalgebruik of algemene adviezen. Noem geen andere beroepen.</p>
-3. <p><em>Toekomsttip:</em> één praktische actie die deze persoon de komende maanden kan nemen om relevant te blijven.</p>
+<p><strong>AI-risicoscore van [Getal] (Hoeveel % kans je hebt om vervangen te worden door AI)</strong></p>
+<p>In maximaal 2 zinnen: leg uit waarom deze score geldt voor iemand in de functie van "${functie}", en geef één concreet voorbeeld van hoe deze persoon zichzelf futureproof kan maken. Geen vaag taalgebruik of algemene adviezen. Noem geen andere beroepen.</p>
+<p><em>Toekomsttip:</em> één praktische actie die deze persoon de komende maanden kan nemen om relevant te blijven.</p>
 
 Spreek de persoon direct aan. Geen markdown. Antwoord alleen in HTML.`
 
