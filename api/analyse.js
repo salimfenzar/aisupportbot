@@ -31,15 +31,22 @@ if (!naam || !functie || !ervaring || !taken  || !opleiding || !sector) {
 }
 
 
-const prompt = `Je bent een loopbaan adviseur. Geef een kort advies in HTML op basis van het profiel van ${naam} hoe deze persoon zichzelf futureproof kan maken om niet vervangen te worden door AI.
-Spreek tot deze persoon. Beperk tot:
-- AI-risicoscore (0-100) in deze format: AI-risicoscore van (Getal)
-- Maximaal 2 zinnen uitleg hoe deze persoon zich futureproof kan maken op basis van zijn/haar ${functie}, geef geen vaag antwoord maar een concreet advies
-- 1 concrete tip voor in de toekomst
+const prompt = `Je bent een professionele loopbaanadviseur gespecialiseerd in AI-impact.
 
-Antwoord in HTML zonder markdown.
+Geef een kort en concreet AI-advies in HTML gebaseerd op dit profiel:
+- Naam: ${naam}
+- Functie: ${functie}
+- Sector: ${sector}
+- AI-risicoscore: [getal tussen 0 en 100]
 
-`;
+Beperk je tot het volgende format:
+
+1. <p><strong>AI-risicoscore van [Getal]</strong></p>
+2. <p>In maximaal 2 zinnen: leg uit waarom deze score geldt voor iemand in de functie van "${functie}", en geef één concreet voorbeeld van hoe deze persoon zichzelf futureproof kan maken. Geen vaag taalgebruik of algemene adviezen. Noem geen andere beroepen.</p>
+3. <p><em>Toekomsttip:</em> één praktische actie die deze persoon de komende maanden kan nemen om relevant te blijven.</p>
+
+Spreek de persoon direct aan. Geen markdown. Antwoord alleen in HTML.`
+
 
 
   try {
