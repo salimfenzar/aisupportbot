@@ -34,23 +34,24 @@ if (!naam || !functie || !ervaring || !taken  || !opleiding || !sector) {
 
 const prompt = `Je bent een professionele loopbaanadviseur gespecialiseerd in AI-impact.
 
-Geef een kort en concreet AI-advies in HTML gebaseerd op dit profiel:
+Geef een concreet en kort AI-advies in HTML op basis van dit profiel:
 - Naam: ${naam}
+- Opleiding: ${opleiding}
 - Functie: ${functie}
 - Sector: ${sector}
 - Taken: ${taken}
 - Ervaring: ${ervaring}
 - Soft-skills: ${softskills}
-- Of de persoon bereid is zich bij te scholen als de functie door ai vervalt: ${bereidheid}
+- Bereidheid tot bijscholing bij AI-verandering: ${bereidheid}
 - AI-risicoscore: [getal tussen 0 en 100]
 
-Beperk je tot het volgende format:
+Beperk je strikt tot dit format:
 
-<p><strong>AI-risicoscore van [Getal] (Hoeveel % kans je hebt om vervangen te worden door AI)</strong></p>
-<p>In maximaal 2 zinnen: leg uit waarom deze score geldt voor iemand in de functie van "${functie}", en geef één concreet voorbeeld van hoe deze persoon zichzelf futureproof kan maken. Geen vaag taalgebruik of algemene adviezen. Noem geen andere beroepen.</p>
-<p><em>Toekomsttip:</em> één praktische actie die deze persoon de komende maanden kan nemen om relevant te blijven.</p>
+<p><strong>AI-risicoscore van [Getal] – jouw geschatte kans om vervangen te worden door AI.</strong></p>
+<p>Jij werkt als "${functie}". Op basis van je ervaring en taken is deze score van toepassing. Eén concreet advies om jezelf futureproof te maken: [specifiek voorstel, bijv. "Volg een cursus data-analyse op MBO-niveau" of "Verdiep je in AI-tools zoals ChatGPT voor klantinteractie"].</p>
+<p><em>Toekomsttip:</em> [Zeer concrete actie, bijv. "Volg binnen 3 maanden een LinkedIn Learning cursus over AI in jouw sector"].</p>
 
-Spreek de persoon direct aan. Geen markdown. Antwoord alleen in HTML.`
+Gebruik geen vaag taalgebruik zoals "ontwikkel je verder" of "blijf leren" zonder uitleg. Gebruik geen opsommingen, geen markdown, geen synoniemen voor de AI-risicoscore. Spreek de persoon direct aan met "je". Antwoord enkel in HTML.`;
 
 
 
