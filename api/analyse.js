@@ -31,10 +31,9 @@ if (!naam || !functie || !ervaring || !taken  || !opleiding || !sector) {
   return res.status(400).json({ message: "Ontbrekende gegevens in het verzoek." });
 }
 
-
 const prompt = `Je bent een professionele loopbaanadviseur gespecialiseerd in AI-impact.
 
-Geef een concreet en kort AI-advies in HTML op basis van dit profiel:
+Geef een concreet, kort en gevarieerd AI-advies in HTML gebaseerd op dit profiel:
 - Naam: ${naam}
 - Opleiding: ${opleiding}
 - Functie: ${functie}
@@ -45,15 +44,15 @@ Geef een concreet en kort AI-advies in HTML op basis van dit profiel:
 - Bereidheid tot bijscholing bij AI-verandering: ${bereidheid}
 - AI-risicoscore: [getal tussen 0 en 100]
 
-Beperk je strikt tot dit format:
+Format:
 
 <p><strong>AI-risicoscore van [Getal] – jouw geschatte kans om vervangen te worden door AI.</strong></p>
-<p>Jij werkt als "${functie}". Op basis van je ervaring en taken is deze score van toepassing. Eén concreet advies om jezelf futureproof te maken: [specifiek voorstel, bijv. "Volg een cursus data-analyse op MBO-niveau" of "Verdiep je in AI-tools zoals ChatGPT voor klantinteractie"].</p>
-<p><em>Toekomsttip:</em> [Zeer concrete actie, bijv. "Volg binnen 3 maanden een LinkedIn Learning cursus over AI in jouw sector"].</p>
+<p>Je werkt als ${functie} in de sector ${sector}. Leg kort uit waarom deze score van toepassing is (max 1 zin). Geef daarna een specifiek en origineel advies over hoe deze persoon zich futureproof kan maken, afhankelijk van zijn of haar achtergrond (opleiding, ervaring, soft skills).</p>
+<p><em>Toekomsttip:</em> Sluit af met een direct toepasbare, originele actie (denk aan een cursus, gesprek met een expert, praktijkervaring of tool die past bij deze persoon).</p>
 
-Gebruik geen vaag taalgebruik zoals "ontwikkel je verder" of "blijf leren" zonder uitleg. Gebruik geen opsommingen, geen markdown, geen synoniemen voor de AI-risicoscore. Spreek de persoon direct aan met "je". Antwoord enkel in HTML.`;
+Wees altijd concreet. Vermijd herhaling of generieke zinnen zoals “leer meer over AI” of “ontwikkel jezelf”. Gebruik verschillende formuleringen en voorbeelden per profiel.
 
-
+Geen opsommingen. Geen markdown. Alleen HTML als output. Spreek de persoon direct aan met “je”.`;
 
   try {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
