@@ -24,6 +24,7 @@ const {
   opleiding,
   taken,
   bereidheid,
+  softskills
 } = req.body;
 
 if (!naam || !functie || !ervaring || !taken  || !opleiding || !sector) {
@@ -37,6 +38,10 @@ Geef een kort en concreet AI-advies in HTML gebaseerd op dit profiel:
 - Naam: ${naam}
 - Functie: ${functie}
 - Sector: ${sector}
+- Taken: ${taken}
+- Ervaring: ${ervaring}
+- Soft-skills: ${softskills}
+- Of de persoon bereid is zich bij te scholen als de functie door ai vervalt: ${bereidheid}
 - AI-risicoscore: [getal tussen 0 en 100]
 
 Beperk je tot het volgende format:
