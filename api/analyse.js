@@ -46,7 +46,7 @@ Geef een concreet, kort en gevarieerd AI-advies in HTML gebaseerd op dit profiel
 
 Format:
 
-<p><strong>AI-risicoscore van [Getal] – jouw geschatte kans om vervangen te worden door AI.</strong></p>
+<p><strong>AI-risicoscore van  – jouw geschatte kans om vervangen te worden door AI.</strong></p>
 <p>Je werkt als ${functie} in de sector ${sector}. Leg kort uit waarom deze score van toepassing is (max 1 zin). Geef daarna een specifiek en origineel advies over hoe deze persoon zich futureproof kan maken, afhankelijk van zijn of haar achtergrond (opleiding, ervaring, soft skills).</p>
 <p><em>Toekomsttip:</em> Sluit af met een direct toepasbare, originele actie (denk aan een cursus, gesprek met een expert, praktijkervaring of tool die past bij deze persoon).</p>
 
